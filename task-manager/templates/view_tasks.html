@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Tasks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Font Awesome for Social Media Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-yellow-400 to-orange-500 min-h-screen">
+    <!-- Navigation Bar 
+    <nav class="bg-gray-800 w-full py-4 px-8 mb-6">
+        <div class="flex justify-between items-center">
+            <h1 class="text-white text-2xl font-semibold">Task Manager</h1>
+            <div class="space-x-4">
+                <a href="/" class="text-white hover:text-gray-400 transition duration-200">Home</a>
+                <a href="/add" class="text-white hover:text-gray-400 transition duration-200">Add Task</a>
+                <a href="/tasks" class="text-white hover:text-gray-400 transition duration-200">View Tasks</a>
+            </div>
+        </div>
+    </nav> 
+
+    <!-- Task Table -->
+    <div class="container mx-auto px-4 py-6">
+        <h1 class="text-3xl font-semibold mb-6 text-center text-white">All Tasks</h1>
+        <a href="/" class="block text-center mt-4 text-blue-500">Back to Home</a>
+
+        <table class="min-w-full table-auto bg-white shadow-lg rounded-lg">
+            <thead class="bg-gray-200">
+                <tr>
+                    <th class="px-6 py-2 text-left">Title</th>
+                    <th class="px-6 py-2 text-left">Description</th>
+                    <th class="px-6 py-2 text-left">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                    <tr class="border-b">
+                        <td class="px-6 py-4">{{ task[1] }}</td>
+                        <td class="px-6 py-4">{{ task[2] }}</td>
+                        <td class="px-6 py-4">{{ task[3] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="flex space-x-6 mt-10 text-white justify-center">
+        <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-blue-600 text-3xl">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="text-white hover:text-blue-400 text-3xl">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-pink-600 text-3xl">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" class="text-white hover:text-blue-700 text-3xl">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+</body>
+</html>
